@@ -11,13 +11,13 @@
       .controller('DemoCtrl', DemoCtrl);
 
   function DemoCtrl ($mdEditDialog, $timeout, $q, $log, $scope, $http) {
-    $http.get("fetch_attendance.php")
-    .then(function (response) {$scope.names = response.data
-      $scope.names.count = response.data.length
-      // console.log($scope.names.count);
-      console.log("in success of fetch_attendance");
-      console.log($scope.names);  
-  });
+  //   $http.get("fetch_attendance.php")
+  //   .then(function (response) {$scope.names = response.data
+  //     $scope.names.count = response.data.length
+  //     // console.log($scope.names.count);
+  //     console.log("in success of fetch_attendance");
+  //     console.log($scope.names);  
+  // });
 
     $scope.no = 10;
 // DATA-TABLE
@@ -190,6 +190,13 @@
     $scope.promise = $timeout(function () {
       // loading
     }, 2000);
+    $http.get("fetch_attendance.php")
+    .then(function (response) {$scope.names = response.data
+      $scope.names.count = response.data.length
+      // console.log($scope.names.count);
+      console.log("in success of fetch_attendance");
+      console.log($scope.names);  
+  });
   }
   
   $scope.logItem = function (item) {
