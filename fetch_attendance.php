@@ -2,7 +2,7 @@
 $servername = "172.31.10.136";
 $username = "root";
 $password = "rrrrrrrr";
-$dbname = "sds-attendance";
+$dbname = "sds";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 if(!$conn){
